@@ -56,7 +56,7 @@ int init_devices(void)
 		if(!dev_path_in_use(cfg.serial_dev)) {
 			dev = add_device();
 			strcpy(dev->path, cfg.serial_dev);
-			dev->evt_num = device_evt_num(cfg.serial_dev);
+			dev->evt_num = -1;
 			if(open_dev_serial(dev) == -1) {
 				remove_device(dev);
 			} else {
