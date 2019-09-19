@@ -42,7 +42,7 @@ static int device_evt_num(const char* path)
 
 	pos += strlen(needle);
 
-	return (int)strtol(pos, NULL, 10);
+	return atoi(pos);
 }
 
 int init_devices(void)
